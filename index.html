@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brazil Economic Pulse</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif; /* Default body font */
+            background-color: #1A202C; /* Dark background for the whole page */
+            color: #E2E8F0; /* Default text color */
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif; /* Headings font */
+        }
+        p, li {
+            font-family: 'Open Sans', sans-serif; /* Paragraphs and lists */
+        }
+        /* Custom scrollbar for carousel */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        /* Fade-in-up animation (simplified for static HTML) */
+        @keyframes fadeInFromBottom {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-in-up {
+            animation: fadeInFromBottom 0.8s ease-out forwards;
+            opacity: 0; /* Start invisible */
+        }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-400 { animation-delay: 0.4s; }
+
+        /* Common Tailwind Classes from React component, adapted for direct use */
+        .container { max-width: 80rem; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; }
+        .card { background-color: rgba(31, 41, 55, 0.5); backdrop-filter: blur(8px); border-radius: 0.75rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); padding: 1.5rem; border: 1px solid rgba(75, 85, 99, 0.5); }
+        .heading { font-size: 2.25rem; line-height: 2.5rem; font-weight: 700; color: #fff; margin-bottom: 1.5rem; text-align: center; }
+        .subheading { font-size: 1.5rem; line-height: 2rem; font-weight: 600; color: #fff; margin-bottom: 1rem; }
+        .paragraph { color: #D1D5DB; line-height: 1.625; margin-bottom: 1rem; }
+        .button { padding-left: 1.5rem; padding-right: 1.5rem; padding-top: 0.75rem; padding-bottom: 0.75rem; border-radius: 9999px; font-weight: 600; color: #fff; transition: all 0.3s ease-in-out; transform: scale(1); }
+        .gradient-button { background-image: linear-gradient(to right, #2563EB, #8B5CF6); }
+        .gradient-button:hover { background-image: linear-gradient(to right, #1D4ED8, #7C3AED); transform: scale(1.05); }
+        .text-gradient { background-clip: text; color: transparent; background-image: linear-gradient(to right, #60A5FA, #A78BFA); }
+        .section-title { font-size: 3rem; line-height: 1; font-weight: 800; color: #fff; margin-bottom: 2rem; text-align: center; }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-900 font-sans">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-gray-900 to-transparent py-4 backdrop-blur-sm">
+        <div class="container flex justify-between items-center">
+            <h1 class="text-3xl font-extrabold text-white">
+                <span class="text-gradient">Brazil</span> Economic Pulse
+            </h1>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-300 hover:text-white transition-colors duration-200">Home</a>
+                <a href="#overview" class="text-gray-300 hover:text-white transition-colors duration-200">Overview</a>
+                <a href="#sectors" class="text-gray-300 hover:text-white transition-colors duration-200">Sectors</a>
+                <a href="#glossary" class="text-gray-300 hover:text-white transition-colors duration-200">Glossary</a>
+                <a href="#exercises" class="text-gray-300 hover:text-white transition-colors duration-200">Exercises</a>
+            </nav>
+            <div class="flex items-center">
+                <span class="text-gray-400 text-sm mr-4 hidden sm:block">Curated by Daby</span>
+                <button class="px-6 py-3 rounded-full font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-700 hover:from-blue-700 hover:to-purple-800 md:hidden">Menu</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative h-screen flex items-center justify-center text-center bg-cover bg-center"
+            style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('https://placehold.co/1920x1080/1A202C/E2E8F0?text=Rio+Skyline');">
+            <div class="container z-10">
+                <h2 class="text-5xl sm:text-6xl md:text-7xl font-extrabold text-white leading-tight mb-6 animate-fade-in-up">
+                    <span class="text-gradient">Brazil Economic Pulse:</span>
+                    <br />
+                    Decoding the Landscape, Driving Informed Decisions
+                </h2>
+                <p class="paragraph text-lg sm:text-xl max-w-3xl mx-auto mb-10 animate-fade-in-up delay-200">
+                    Your definitive source for in-depth analysis and real-time insights into Brazil's dynamic economic environment, from the intricacies of fiscal policy to the innovations in digital finance.
+                </p>
+                <a href="#overview" class="button gradient-button text-xl px-8 py-4 animate-fade-in-up delay-400">
+                    Explore In-Depth Insights
+                </a>
+            </div>
+        </section>
+
+        <!-- Snapshot Section -->
+        <section class="py-20 bg-gray-900">
+            <div class="container">
+                <h2 class="section-title">Today's Snapshot: Key Economic Indicators</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="card">
+                        <div class="flex items-center mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-line-chart text-blue-400 mr-3"><path d="M3 3v18h18"/><path d="m18 10-4 4-2-2-3 3"/></svg>
+                            <h3 class="text-xl font-semibold text-white">GDP Growth (Q1 2025)</h3>
+                        </div>
+                        <p class="text-3xl font-bold text-white mb-2">1.4%</p>
+                        <p class="text-gray-400">Quarter-on-quarter expansion, reflecting a resilient start to the year, primarily driven by strong agricultural output and a robust services sector. Analysts anticipate a moderate slowdown in the latter half of 2025 due to tighter monetary conditions.</p>
+                    </div>
+                    <div class="card">
+                        <div class="flex items-center mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up text-red-400 mr-3"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                            <h3 class="text-xl font-semibold text-white">Inflation (IPCA, Apr 2025)</h3>
+                        </div>
+                        <p class="text-3xl font-bold text-white mb-2">5.53%</p>
+                        <p class="text-gray-400">The 12-month accumulated rate, remaining above the Central Bank's target. While showing signs of stabilization, persistent supply-side pressures and global commodity prices continue to pose challenges to full disinflation.</p>
+                    </div>
+                    <div class="card">
+                        <div class="flex items-center mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users text-green-400 mr-3"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            <h3 class="text-xl font-semibold text-white">Unemployment (May 2025)</h3>
+                        </div>
+                        <p class="text-3xl font-bold text-white mb-2">6.2%</p>
+                        <p class="text-gray-400">A multi-year low for May, indicating continued strength in the labor market. This positive trend is supported by an increase in formal job creation across various economic sectors, boosting consumer confidence.</p>
+                    </div>
+                    <div class="card">
+                        <div class="flex items-center mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-banknote text-yellow-400 mr-3"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M6 12h.01"/><path d="M18 12h.01"/></svg>
+                            <h3 class="text-xl font-semibold text-white">Selic Rate (June 2025)</h3>
+                        </div>
+                        <p class="text-3xl font-bold text-white mb-2">15.00%</p>
+                        <p class="text-gray-400">Brazil's benchmark interest rate, maintained by the Central Bank to combat inflationary pressures. This high rate impacts borrowing costs for businesses and consumers, influencing investment and consumption decisions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Carousel (Static Version) -->
+        <section class="py-20 bg-gray-800">
+            <div class="container">
+                <h2 class="section-title">Latest Headlines <span class="text-sm text-gray-400">(Illustrative News)</span></h2>
+                <p class="text-center text-gray-400 mb-8">
+                    *In a real-time application, this section would display live news fetched from Brazilian media outlets via a dedicated API.*
+                </p>
+                <div class="flex overflow-x-auto space-x-6 pb-4 scrollbar-hide">
+                    <div class="card min-w-[300px] flex-shrink-0">
+                        <p class="text-sm text-gray-400 mb-2">July 1, 2025 | Agriculture</p>
+                        <h3 class="text-xl font-semibold text-white mb-3">Plano Safra 25/26 Announced: R$516.2 Billion to Boost Agribusiness</h3>
+                        <p class="text-gray-300 text-sm">The government unveiled a record allocation for agricultural financing, aiming to bolster production and sustainability in the sector. This includes increased limits and new environmental requirements for credit, emphasizing responsible farming practices and improved storage infrastructure nationwide.</p>
+                        <button class="text-blue-400 hover:text-blue-300 text-sm mt-4">Read More</button>
+                    </div>
+                    <div class="card min-w-[300px] flex-shrink-0">
+                        <p class="text-sm text-gray-400 mb-2">July 1, 2025 | Fiscal</p>
+                        <h3 class="text-xl font-semibold text-white mb-3">Tax Reform Faces New Hurdles in Congressional Congressional Debate</h3>
+                        <p class="text-gray-300 text-sm">Discussions around the comprehensive tax reform continue to evolve, with new proposals and debates emerging on its impact on various sectors and income brackets. Key points of contention include the scope of the Dual VAT model and the implementation timeline for new dividend taxation.</p>
+                        <button class="text-blue-400 hover:text-blue-300 text-sm mt-4">Read More</button>
+                    </div>
+                    <div class="card min-w-[300px] flex-shrink-0">
+                        <p class="text-sm text-gray-400 mb-2">June 30, 2025 | Digital Finance</p>
+                        <h3 class="text-xl font-semibold text-white mb-3">Central Bank Explores Further PIX Enhancements for Businesses</h3>
+                        <p class="text-gray-300 text-sm">Following its widespread adoption, the Central Bank is studying new functionalities for PIX, focusing on expanding its utility for small and medium-sized enterprises. Potential enhancements include advanced payment scheduling, integration with NFC technology, and improved fraud detection mechanisms to ensure even greater security and convenience.</p>
+                        <button class="text-blue-400 hover:text-blue-300 text-sm mt-4">Read More</button>
+                    </div>
+                    <div class="card min-w-[300px] flex-shrink-0">
+                        <p class="text-sm text-gray-400 mb-2">June 29, 2025 | Digital Finance</p>
+                        <h3 class="text-xl font-semibold text-white mb-3">DREX Pilot Project Shows Promising Results in Tokenized Transactions</h3>
+                        <p class="text-gray-300 text-sm">Early tests of Brazil's digital currency, DREX, demonstrate successful tokenization of assets and the potential for more efficient financial operations. The pilot has shown particular promise in facilitating complex transactions like real estate transfers through smart contracts, moving closer to broader implementation and exploring its global interoperability.</p>
+                        <button class="text-blue-400 hover:text-blue-300 text-sm mt-4">Read More</button>
+                    </div>
+                    <div class="card min-w-[300px] flex-shrink-0">
+                        <p class="text-sm text-gray-400 mb-2">June 28, 2025 | Trade</p>
+                        <h3 class="text-xl font-semibold text-white mb-3">Brazilian Exports Surge in Key Commodities, Driving Trade Surplus</h3>
+                        <p class="text-gray-300 text-sm">Strong global demand for agricultural products (soybeans, corn, beef) and minerals (iron ore) has led to a significant increase in Brazil's export volumes. This robust performance is contributing positively to the trade balance and strengthening foreign reserves, despite global economic uncertainties.</p>
+                        <button class="text-blue-400 hover:text-blue-300 text-sm mt-4">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Analysis Section (Static) -->
+        <section class="py-20 bg-gray-900">
+            <div class="container">
+              <h2 class="section-title">Featured Analysis</h2>
+              <div class="card text-center">
+                <h3 class="text-2xl font-semibold text-white mb-4">
+                  Fiscal Sustainability: Brazil's Enduring Challenge
+                </h3>
+                <p class="paragraph">
+                  Delve into the complexities of Brazil's public debt, government spending, and the ongoing efforts to achieve fiscal balance. This analysis explores the implications of recent policy decisions and future outlooks.
+                </p>
+                <a href="#overview" class="button gradient-button">
+                  Read Full Analysis
+                </a>
+              </div>
+            </div>
+          </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 py-10 text-center text-gray-400 text-sm">
+        <div class="container">
+            <p>Curated by Daby</p>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons (important for them to render) -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
